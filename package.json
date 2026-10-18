@@ -1,0 +1,21 @@
+{
+  "name": "vendor-risk-copilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Full-stack procurement & third-party-risk app with an MCP-based AI agent and human approval.",
+  "workspaces": [
+    "packages/shared",
+    "packages/api",
+    "packages/mcp",
+    "packages/web"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "dev:api": "npm run dev --workspace packages/api",
+    "dev:web": "npm run dev --workspace packages/web",
+    "mcp": "npm run start --workspace packages/mcp"
+  },
+  "license": "MIT"
+}
